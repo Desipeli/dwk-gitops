@@ -1,0 +1,51 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: broadcaster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broadcaster
+  strategy:
+    canary:
+      steps:
+        - setWeight: 50
+        - analysis:
+            templates:
+            - templateName: cpu-usage
+  template:
+    metadata:
+      labels:
+        app: broadcaster
+    spec:
+      containers:
+        - name: broadcaster
+          image: TODOBROADCASTER/IMAGE
+          imagePullPolicy: Always
+          env:
+          - name: PORT
+            value: "8006"
+          - name: ENV
+            value: none
+          - name: NATS_URL
+            value: nats://my-nats:4222
+          envFrom:
+            - secretRef:
+                name: todo-database-secret
+          resources:
+            limits:
+              cpu: "75m"
+              memory: "10Mi"
+          readinessProbe:
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            httpGet:
+              path: /healthz
+              port: 8006
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            httpGet:
+              path: /healthz
+              port: 8006
