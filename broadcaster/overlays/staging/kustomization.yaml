@@ -17,8 +17,6 @@ patches:
       name: cpu-usage
     path: analysis-patch.json
 
-namePrefix: stag-
-
 images:
   - name: TODOBROADCASTER/IMAGE
     newName: desipeli/dwk-broadcaster
