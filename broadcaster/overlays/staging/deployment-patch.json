@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/containers/0/env/0/value",
+    "value": "staging"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/containers/0/env/1/value",
+    "value": "nats://staging-nats:4222"
+  }
+]
