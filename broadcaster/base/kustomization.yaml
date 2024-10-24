@@ -5,7 +5,3 @@ resources:
 - ./deployment.yaml
 - ./ingress.yaml
 - ./service.yaml
-images:
-- name: TODOBROADCASTER/IMAGE
-  newName: desipeli/dwk-broadcaster
-  newTag: b1e49c600adb7793e8393394bfca88669354e81f
