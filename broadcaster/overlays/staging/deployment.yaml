@@ -10,3 +10,5 @@ spec:
           env:
             - name: ENV
               value: staging
+            - name: NATS_URL
+              value: nats://staging-nats:4222
