@@ -6,7 +6,7 @@
   },
   {
     "op": "replace",
-    "path": "/spec/rules/0",
+    "path": "/spec/rules/0/host",
     "value": "staging.todo.com"
   }
 ]
