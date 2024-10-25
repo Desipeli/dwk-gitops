@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/metadata/namespace",
+    "value": "production"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0/host",
+    "value": "production.todo.com"
+  }
+]

@@ -8,7 +8,7 @@ patches:
       group: argoproj.io
       version: v1alpha1
       kind: Rollout
-      name: broadcaster
+      name: todo-backend
     path: deployment-patch.json
   - target:
       group: argoproj.io
@@ -16,8 +16,14 @@ patches:
       kind: AnalysisTemplate
       name: cpu-usage
     path: analysis-patch.json
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: dwk-todo-backend-ingress
+    path: ingress-patch.json
 
 images:
-  - name: TODOBROADCASTER/IMAGE
-    newName: desipeli/dwk-broadcaster
-    newTag: b1e49c600adb7793e8393394bfca88669354e81f
+  - name: TODOBACKEND/IMAGE
+    newName: desipeli/dwk-todo-backend
+    newTag: "4.06"
