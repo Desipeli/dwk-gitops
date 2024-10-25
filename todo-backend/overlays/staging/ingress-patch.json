@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/metadata/namespace",
+    "value": "staging"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/rules/0",
+    "value": "staging.todo.com"
+  }
+]
