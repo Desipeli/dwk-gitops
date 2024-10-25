@@ -16,6 +16,12 @@ patches:
       kind: AnalysisTemplate
       name: cpu-usage
     path: analysis-patch.json
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: dwk-todo-backend-ingress
+    path: ingress-patch.json
 
 images:
   - name: TODOBACKEND/IMAGE
