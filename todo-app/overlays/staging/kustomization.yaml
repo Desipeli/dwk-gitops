@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+  
+patches:
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: AnalysisTemplate
+      name: cpu-usage
+    path: analysis-patch.json
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: dwk-todo-app-ingress
+    path: ingress-patch.json
+
+images:
+  - name: TODOAPP/IMAGE
+    newName: desipeli/dwk-todo-app
+    newTag: "4.05v3"
