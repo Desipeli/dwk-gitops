@@ -21,8 +21,14 @@ patches:
       version: v1
       kind: PersistentVolume
       name: todo-pv
-    path: volume-patch.json
-
+    path: pv-patch.json
+  - target:
+      group: ""
+      version: v1
+      kind: PersistentVolumeClaim
+      name: todo-claim
+    path: pvc-patch.json
+    
 images:
   - name: TODOAPP/IMAGE
     newName: desipeli/dwk-todo-app

@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/metadata/name",
+    "value": "todo-pv-staging"
+  },
+  {
+    "op": "replace",
+    "path": "/spec/local/path",
+    "value": "/tmp/todo-app-staging"
+  }
+]
