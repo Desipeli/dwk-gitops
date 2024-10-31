@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: cpu-usage
+  name: cpu-usage-broadcaster
 spec:
   metrics:
-  - name: cpu-usage
+  - name: cpu-usage-broadcaster
     initialDelay: 2m
     successCondition: result[0] < 0.2
     provider:

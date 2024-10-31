@@ -12,7 +12,7 @@ spec:
       steps:
         - analysis:
             templates:
-            - templateName: cpu-usage
+            - templateName: cpu-usage-app
   template:
     metadata:
       labels:

@@ -14,7 +14,7 @@ patches:
       group: argoproj.io
       version: v1alpha1
       kind: AnalysisTemplate
-      name: cpu-usage
+      name: cpu-usage-backend
     path: analysis-patch.json
   - target:
       group: networking.k8s.io

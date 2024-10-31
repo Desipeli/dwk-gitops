@@ -14,7 +14,7 @@ patches:
       group: argoproj.io
       version: v1alpha1
       kind: AnalysisTemplate
-      name: cpu-usage
+      name: cpu-usage-broadcaster
     path: analysis-patch.json
 
 images:
