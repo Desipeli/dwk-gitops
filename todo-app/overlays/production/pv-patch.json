@@ -6,6 +6,11 @@
   },
   {
     "op": "replace",
+    "path": "/spec/storageClassName",
+    "value": "todo-pv-production"
+  },
+  {
+    "op": "replace",
     "path": "/spec/local/path",
     "value": "/tmp/todo-app-production"
   }

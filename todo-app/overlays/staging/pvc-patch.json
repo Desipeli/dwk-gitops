@@ -3,5 +3,10 @@
     "op": "replace",
     "path": "/metadata/name",
     "value": "todo-claim-staging"
+  },
+  {
+    "op": "add",
+    "path": "/spec/storageClassName",
+    "value": "todo-pv-staging"
   }
 ]
