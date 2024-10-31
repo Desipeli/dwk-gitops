@@ -1,23 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../base
+- ../../base
   
 patches:
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: Rollout
-      name: broadcaster
-    path: deployment-patch.json
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: AnalysisTemplate
-      name: cpu-usage
-    path: analysis-patch.json
+- path: deployment-patch.json
+  target:
+    group: argoproj.io
+    kind: Rollout
+    name: broadcaster
+    version: v1alpha1
+- path: analysis-patch.json
+  target:
+    group: argoproj.io
+    kind: AnalysisTemplate
+    name: cpu-usage
+    version: v1alpha1
 
 images:
-  - name: TODOBROADCASTER/IMAGE
-    newName: desipeli/dwk-broadcaster
-    newTag: b1e49c600adb7793e8393394bfca88669354e81f
+- name: TODOBROADCASTER/IMAGE
+  newName: desipeli/dwk-broadcaster
+  newTag: eddb75213a1d532bfd287003c2a654990a627809
