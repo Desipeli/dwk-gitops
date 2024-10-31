@@ -13,7 +13,7 @@ spec:
         - setWeight: 50
         - analysis:
             templates:
-            - templateName: cpu-usage
+            - templateName: cpu-usage-broadcaster
   template:
     metadata:
       labels:
