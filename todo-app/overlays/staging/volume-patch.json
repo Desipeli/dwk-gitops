@@ -1,7 +1,12 @@
 [
   {
     "op": "add",
+    "path": "/metadata/labels",
+    "value": {}
+  },
+  {
+    "op": "add",
     "path": "/metadata/labels/app.kubernetes.io~1instance",
-    "value": "staging-todo-app"
+    "value": "stag-todo-app"
   }
 ]
