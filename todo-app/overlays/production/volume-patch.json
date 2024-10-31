@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/labels/app.kubernetes.io~1instance",
+    "value": "production-todo-app"
+  }
+]

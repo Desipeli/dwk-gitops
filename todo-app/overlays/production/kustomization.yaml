@@ -17,13 +17,11 @@ patches:
       name: dwk-todo-app-ingress
     path: ingress-patch.json
   - target:
+      group: ""
+      version: v1
       kind: PersistentVolume
       name: todo-pv
-    patch: |
-      metadata:
-       labels:
-        app.kubernetes.io/instance: production-todo-app
-
+    path: volume-patch.json
 images:
   - name: TODOAPP/IMAGE
     newName: desipeli/dwk-todo-app
