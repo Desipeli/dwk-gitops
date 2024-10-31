@@ -4,18 +4,18 @@ resources:
 - ../../base
   
 patches:
-- path: deployment-patch.json
-  target:
-    group: argoproj.io
-    kind: Rollout
-    name: broadcaster
-    version: v1alpha1
-- path: analysis-patch.json
-  target:
-    group: argoproj.io
-    kind: AnalysisTemplate
-    name: cpu-usage-broadcaster
-    version: v1alpha1
+  - target:
+      group: argoproj.io
+      kind: Rollout
+      name: broadcaster
+      version: v1alpha1
+    path: deployment-patch.json
+  - target: 
+      group: argoproj.io
+      kind: AnalysisTemplate
+      name: cpu-usage-broadcaster
+      version: v1alpha1
+    path: analysis-patch.json
 
 images:
 - name: TODOBROADCASTER/IMAGE
