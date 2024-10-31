@@ -26,4 +26,4 @@ patches:
 images:
 - name: TODOBACKEND/IMAGE
   newName: desipeli/dwk-todo-backend
-  newTag: 1764d02cd8e73a0c6d4a7f81f02f273bae741090
+  newTag: 10f9f11391e462674386d936bea9f7c046f0d04f
