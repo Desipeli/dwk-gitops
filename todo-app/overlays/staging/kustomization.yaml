@@ -16,6 +16,13 @@ patches:
       kind: Ingress
       name: dwk-todo-app-ingress
     path: ingress-patch.json
+  - target:
+      kind: PersistentVolume
+      name: todo-pv
+    patch: |
+      metadata:
+       labels:
+        app.kubernetes.io/instance: staging-todo-app
 
 images:
   - name: TODOAPP/IMAGE
