@@ -1,30 +1,30 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../base
-  - ./backup-cronjob.yaml
+- ../../base
+- ./backup-cronjob.yaml
   
 patches:
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: Rollout
-      name: todo-backend
-    path: deployment-patch.json
-  - target:
-      group: argoproj.io
-      version: v1alpha1
-      kind: AnalysisTemplate
-      name: cpu-usage-backend
-    path: analysis-patch.json
-  - target:
-      group: networking.k8s.io
-      version: v1
-      kind: Ingress
-      name: dwk-todo-backend-ingress
-    path: ingress-patch.json
+- path: deployment-patch.json
+  target:
+    group: argoproj.io
+    kind: Rollout
+    name: todo-backend
+    version: v1alpha1
+- path: analysis-patch.json
+  target:
+    group: argoproj.io
+    kind: AnalysisTemplate
+    name: cpu-usage-backend
+    version: v1alpha1
+- path: ingress-patch.json
+  target:
+    group: networking.k8s.io
+    kind: Ingress
+    name: dwk-todo-backend-ingress
+    version: v1
 
 images:
-  - name: TODOBACKEND/IMAGE
-    newName: desipeli/dwk-todo-backend
-    newTag: "4.06"
+- name: TODOBACKEND/IMAGE
+  newName: desipeli/dwk-todo-backend
+  newTag: "4.08"
