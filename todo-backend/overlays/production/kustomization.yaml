@@ -27,4 +27,4 @@ patches:
 images:
 - name: TODOBACKEND/IMAGE
   newName: desipeli/dwk-todo-backend
-  newTag: "4.08"
+  newTag: 4.08v2
