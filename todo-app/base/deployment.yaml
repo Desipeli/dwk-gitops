@@ -26,6 +26,9 @@ spec:
         - name: todo-app
           image: TODOAPP/IMAGE
           imagePullPolicy: Always
+          volumeMounts:
+            - name: persistentdata
+              mountPath: /tmp/<REPLACE THIS>
           env:
           - name: PORT
             value: "8000"

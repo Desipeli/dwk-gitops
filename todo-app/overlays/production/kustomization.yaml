@@ -28,6 +28,12 @@ patches:
       kind: PersistentVolumeClaim
       name: todo-claim
     path: pvc-patch.json
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Rollout
+      name: todo-app
+    path: deployment-patch.yaml
 
 images:
   - name: TODOAPP/IMAGE
