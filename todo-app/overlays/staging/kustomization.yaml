@@ -30,4 +30,4 @@ patches:
 images:
 - name: TODOAPP/IMAGE
   newName: desipeli/dwk-todo-app
-  newTag: 10f9f11391e462674386d936bea9f7c046f0d04f
+  newTag: e9f7f66798af03a5e818e93550257c78dd5ba713
