@@ -20,4 +20,4 @@ patches:
 images:
 - name: TODOBROADCASTER/IMAGE
   newName: desipeli/dwk-broadcaster
-  newTag: 1764d02cd8e73a0c6d4a7f81f02f273bae741090
+  newTag: e9f7f66798af03a5e818e93550257c78dd5ba713
