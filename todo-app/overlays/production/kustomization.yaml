@@ -38,4 +38,4 @@ patches:
 images:
 - name: TODOAPP/IMAGE
   newName: desipeli/dwk-todo-app
-  newTag: "4.08"
+  newTag: 4.08v2

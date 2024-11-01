@@ -20,4 +20,4 @@ patches:
 images:
 - name: TODOBROADCASTER/IMAGE
   newName: desipeli/dwk-broadcaster
-  newTag: "4.08"
+  newTag: 4.08v2
