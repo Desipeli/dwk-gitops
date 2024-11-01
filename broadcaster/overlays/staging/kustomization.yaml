@@ -4,20 +4,20 @@ resources:
 - ../../base
   
 patches:
-  - target:
-      group: argoproj.io
-      kind: Rollout
-      name: broadcaster
-      version: v1alpha1
-    path: deployment-patch.json
-  - target: 
-      group: argoproj.io
-      kind: AnalysisTemplate
-      name: cpu-usage-broadcaster
-      version: v1alpha1
-    path: analysis-patch.json
+- path: deployment-patch.json
+  target:
+    group: argoproj.io
+    kind: Rollout
+    name: broadcaster
+    version: v1alpha1
+- path: analysis-patch.json
+  target:
+    group: argoproj.io
+    kind: AnalysisTemplate
+    name: cpu-usage-broadcaster
+    version: v1alpha1
 
 images:
 - name: TODOBROADCASTER/IMAGE
   newName: desipeli/dwk-broadcaster
-  newTag: eddb75213a1d532bfd287003c2a654990a627809
+  newTag: e9f7f66798af03a5e818e93550257c78dd5ba713
