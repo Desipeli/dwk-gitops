@@ -26,11 +26,16 @@ spec:
         - name: todo-app
           image: TODOAPP/IMAGE
           imagePullPolicy: Always
+          volumeMounts:
+            - name: persistentdata
+              mountPath: /tmp/<REPLACE THIS>
           env:
           - name: PORT
             value: "8000"
           - name: BACKEND_SERVICE_ADDR
             value: http://todo-backend-svc:5678
+          - name: MOUNT_PATH
+            value: <REPLACE THIS WITH mountPath>
           resources:
             limits:
               cpu: "10m"
