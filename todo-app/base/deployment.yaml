@@ -17,8 +17,8 @@ spec:
     metadata:
       labels:
         app: todo-app
-      annotations:
-        linkerd.io/inject: enabled
+      # annotations:
+      #   linkerd.io/inject: enabled
     spec:
       volumes:
         - name: persistentdata
