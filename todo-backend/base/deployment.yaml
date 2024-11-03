@@ -18,6 +18,8 @@ spec:
     metadata:
       labels:
         app: todo-backend
+      annotations:
+        linkerd.io/inject: enabled
     spec:
       containers:
         - name: todo-backend
