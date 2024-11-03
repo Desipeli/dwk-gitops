@@ -40,8 +40,8 @@ spec:
             value: <REPLACE THIS WITH mountPath>
           resources:
             limits:
-              cpu: "10m"
-              memory: "15Mi"
+              cpu: "20m"
+              memory: "30Mi"
           readinessProbe:
             initialDelaySeconds: 5
             periodSeconds: 5

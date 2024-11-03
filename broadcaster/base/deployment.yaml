@@ -37,8 +37,8 @@ spec:
                 name: todo-database-secret
           resources:
             limits:
-              cpu: "75m"
-              memory: "10Mi"
+              cpu: "200m"
+              memory: "50Mi"
           readinessProbe:
             initialDelaySeconds: 5
             periodSeconds: 5
