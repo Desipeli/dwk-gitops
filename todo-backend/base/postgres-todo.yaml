@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: todopostgresapp
+      annotations:
+        linkerd.io/inject: enabled
     spec:
       containers:
         - name: todo-database
